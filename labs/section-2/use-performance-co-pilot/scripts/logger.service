@@ -1,0 +1,11 @@
+[Unit]
+Description=Fauxshady service to spike CPU
+
+[Service]
+User=root
+ExecStart=/bin/sh /opt/scripts/logger.sh
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
